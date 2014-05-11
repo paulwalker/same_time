@@ -10,19 +10,12 @@ SameTime.equal?('password', 'password') => true
 
 Add this line to your application's Gemfile:
 
-    gem 'constant_time_compare'
+    gem 'same_time'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install constant_time_compare
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
