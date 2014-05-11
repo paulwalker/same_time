@@ -5,10 +5,26 @@ Constant time string comparisons in ruby
 ```ruby
 require 'same_time'
 
-SameTime.equal?('password', 'password') # => true
+SameTime.equal?('encrypted_value', 'encrypted_value') # => true
+
+SameTime.equal?('encrypted_value', 'mismatched_encrypted_value') # => false
 
 SameTime.equal?(' ', ' ')  # => false
+
 SameTime.equal?(' ', ' ', allow_blank: true) # => true
+```
+
+The algorithm:
+
+```
+def equal?(a, b, opts = {})
+  return false if a.bytesize != b.bytesize ||
+    (!opts[:allow_blank] && a !~ /[^[:space:]]/)
+
+  y = b.bytes
+
+  a.bytes.inject(0) { |r,x| r ^ (x ^ y.shift) } == 0
+end
 ```
 
 ## Installation
