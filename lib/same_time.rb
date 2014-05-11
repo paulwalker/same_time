@@ -4,7 +4,7 @@ module SameTime
   class << self
     def equal?(a, b, opts = {})
       return false if a.bytesize != b.bytesize ||
-        (!opts[:allow_blank] && a =~ /[^[:space:]]/)
+        (!opts[:allow_blank] && a !~ /[^[:space:]]/)
 
       y = b.bytes
 
