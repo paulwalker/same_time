@@ -1,9 +1,14 @@
 # Same Time
 
+Constant time string comparisons in ruby
+
 ```ruby
 require 'same_time'
 
-SameTime.equal?('password', 'password') => true
+SameTime.equal?('password', 'password') # => true
+
+SameTime.equal?(' ', ' ')  # => false
+SameTime.equal?(' ', ' ', allow_blank: true) # => true
 ```
 
 ## Installation
