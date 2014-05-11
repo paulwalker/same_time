@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Paul Walker']
   spec.email         = ['github@paulwalker.tv']
   spec.summary       = %q{Constant time string comparison}
-  spec.description   = %q{}
+  spec.description   = %q{Constant time string comparison in order to secure against timing attacks}
   spec.homepage      = 'https://github.com/paulwalker/same_time'
   spec.license       = 'MIT'
 

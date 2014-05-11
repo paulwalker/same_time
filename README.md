@@ -1,6 +1,10 @@
 # ConstantTimeCompare
 
-TODO: Write a gem description
+```ruby
+require 'same_time'
+
+SameTime.equal?('password', 'password') => true
+```
 
 ## Installation
 
