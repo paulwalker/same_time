@@ -1,4 +1,4 @@
-# ConstantTimeCompare
+# Same Time
 
 ```ruby
 require 'same_time'
